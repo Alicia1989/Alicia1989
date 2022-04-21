@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primary-color: #2b81e4;
+  --secondary-color: #eee;
+  --white-color: #fff;
+  --beige-color: #f7f7f7;
+  --grey-color: #555;
+  --light-grey-color: #777;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.popular-tours-heading {
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Philosopher", sans-serif;
+}
+
+.contact-form {
+  width: 70%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary-color);
+  box-shadow: 0 0rem 1rem -0.3rem #6c6868;
+}
+.input-groups {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.input-group-row {
+  width: 49.5%;
+  display: flex;
+  justify-content: space-between;
+}
+.input-group {
+  width: 49.5%;
+  border: none;
+  display: flex;
+  padding: 10px;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  flex-direction: column;
+  background-color: white;
+}
+.dropDownLabel {
+  top: 1rem;
+  left: 1rem;
+  color: black;
+  font-size: 1rem;
+  position: absolute;
+}
+.inputLabel {
+  font-size: 15px;
+}
+.radio-inline {
+  font-size: 0.8em;
+  margin-right: 15px;
+}
+.inputRadio {
+  margin-right: 5px;
+}
+.inputBox {
+  width: 100%;
+  border: none;
+  font-size: 22px;
+  margin-top: 0.5em;
+  position: relative;
+  border-radius: 5px;
+  background-color: white;
+}
+.input-group_input-radius {
+  width: 49.5%;
+  font-size: 1.4rem;
+  position: relative;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  transition: border 0.3s;
+  background-color: white;
+  border: 0.1rem solid gray;
+  padding: 3rem 1rem 1rem 1rem;
+  color: var(--light-grey-color);
+}
+.input-group_select {
+  font-size: 1.1rem;
+  width: 100%;
+  border: 1px solid gainsboro;
+  border-radius: 10px;
+  color: var(--light-grey-color);
+  letter-spacing: 0.1rem;
+  background-color: white;
+  padding: 10px 5px;
+}
+.form-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  letter-spacing: 0.1rem;
+  background-color: white;
+  color: var(--primary-color);
+  transition: background-color 0.4s;
+}
+.form-btn:hover {
+  color: white;
+  background-color: var(--grey-color);
+}
+#search-btn {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 0.5rem;
+  font-family: sans-serif;
+  background-color: #f1c933;
+  transition: background-color 0.4s;
+}
+#search-btn:hover {
+  color: white;
+  background-color: var(--grey-color);
+}
+
+#travelForm{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+}

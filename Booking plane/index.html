@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Philosopher&family=Russo+One&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Booking a ticket</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+  </head>
+  <body>
+    <!--reservation form-->
+    <section>
+      <div class="contact-form">
+        <h1 class="popular-tours-heading">Book Your Trip</h1>
+        <div class="input-groups">
+          <div class="input-group">
+            <label class="inputLabel">Where from *</label>
+            <input class="inputBox" id="location" type="text" required placeholder="Where from?" />
+          </div>
+          <div class="input-group">
+            <label class="inputLabel">Destination *</label>
+            <input class="inputBox" type="text" id="destination" required placeholder="Where are you going?" />
+          </div>
+        </div>
+        <button id="search-btn" onclick="search()">Search</button>
+        <div id="travelForm">
+          <div class="input-groups">
+            <div class="input-group">
+              <label class="inputLabel">Departure - Return Date</label>
+              <input type="text" class="inputBox" name="daterange" value="04/26/2022 - 05/26/2022" />
+            </div>
+
+            <div class="input-group-row">
+              <div class="input-group">
+                <label class="inputLabel">Adults</label>
+                <input class="inputBox" type="number" min="1" max="10" required placeholder="1" />
+              </div>
+
+              <div class="input-group">
+                <label class="inputLabel">kids</label>
+                <input class="inputBox" type="number" min="1" max="10" placeholder="0" />
+              </div>
+            </div>
+          </div>
+          <div class="input-groups">
+            <div class="input-group_input-radius">
+              <label class="dropDownLabel">Choose your flight</label>
+              <form>
+                <label class="radio-inline"> <input class="inputRadio" type="radio" name="optradio" checked />Return</label>
+                <label class="radio-inline"> <input class="inputRadio" type="radio" name="optradio" />One way </label>
+              </form>
+            </div>
+            <div class="input-group_input-radius">
+              <label class="dropDownLabel">Preference</label>
+              <select name="tarifas" class="input-group_select">
+                <option value="volvo">Premium</option>
+                <option value="saab">VIP</option>
+                <option value="mercedes">Turist</option>
+              </select>
+            </div>
+          </div>
+          <div class="input-groups">
+            <button class="form-btn" onclick="alert()">Submit</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $(function () {
+        $('input[name="daterange"]').daterangepicker({ opens: "left" }, function (start, end, label) {
+          console.log("A new date selection was made: " + start.format("YYYY-MM-DD") + " to " + end.format("YYYY-MM-DD"));
+        });
+      });
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
